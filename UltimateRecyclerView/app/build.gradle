@@ -20,6 +20,11 @@ android {
     lintOptions {
         abortOnError false
     }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    namespace 'com.marshalchen.ultimaterecyclerview.demo'
 }
 repositories {
     flatDir {
@@ -30,12 +35,10 @@ repositories {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     debugImplementation "com.squareup.leakcanary:leakcanary-android:${LEAKCANARY}"
-    releaseImplementation "com.squareup.leakcanary:leakcanary-android-no-op:${LEAKCANARY}"
-    testImplementation "com.squareup.leakcanary:leakcanary-android-no-op:${LEAKCANARY}"
-    implementation 'com.google.android.gms:play-services-ads:12.0.1'
+    implementation 'com.google.android.gms:play-services-ads:22.6.0'
     implementation 'androidx.multidex:multidex:2.0.1'
     implementation 'com.hkm.loyalslider:library:1.6.2'
-    implementation 'jp.wasabeef:recyclerview-animators:2.2.3'
+    implementation 'jp.wasabeef:recyclerview-animators:4.0.2'
     //compile 'com.marshalchen.ultimaterecyclerview:library:0.8.0'
     api project(':ultimaterecyclerview')
     //used in the gridlayout
