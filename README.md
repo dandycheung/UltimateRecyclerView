@@ -23,7 +23,7 @@ Notice that UltimateRecyclerView is a project under development.
 
 ### Features:
 
-* Swipe to refresh(using android.support.v4.widget.SwipeRefreshLayout)
+* Swipe to refresh(using AndroidX SwipeRefreshLayout)
 * Many kinds of animations
 * Swipe to dismiss
 * Parallax or normal head view
@@ -43,11 +43,12 @@ Notice that UltimateRecyclerView is a project under development.
 ##### 1.Using Gradle:
 ```groovy
 repositories {
-    jcenter()
-    }
+    mavenCentral()
+    google()
+}
 dependencies {
     ...
-    compile 'com.marshalchen.ultimaterecyclerview:library:0.9.0'
+    implementation 'com.marshalchen.ultimaterecyclerview:library:0.9.0'
 }
 ```
 
